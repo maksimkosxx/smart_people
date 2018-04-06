@@ -1,0 +1,29 @@
+/* NEWS-LINE */
+
+.news-line {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5px 0 7px 16px;
+  background-color: $black;
+  box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.12);
+  &__courses {
+    display: flex;
+    flex-flow: row;
+    min-width: 215px;
+    border-right: 1px solid $white-two;
+    span {
+      white-space: nowrap;
+      &:first-child {
+        margin-right: 14px;
+      }
+    }
+  }
+  &__info {
+    padding-left: 20px;
+    line-height: 1.3;
+  }
+}
+
+/* NEWS-LINE end */
+

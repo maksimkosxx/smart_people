@@ -1,0 +1,25 @@
+/* GRID */
+
+.grid {
+  overflow: hidden;
+  &--main {
+    margin-top: 32px;
+  }
+  &-content {
+    &__row {
+      margin: 0 -15px;
+    }
+    &__item {
+      margin: 15px 0;
+      &::after,
+      &::before {
+        content: '';
+        display: table;
+        clear: both;
+      }
+    }
+  }
+}
+
+
+/* GRID end */

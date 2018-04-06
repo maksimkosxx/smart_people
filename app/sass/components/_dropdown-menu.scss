@@ -1,0 +1,36 @@
+/* DROPDOWN-MENU */
+
+.dropdown-menu {
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 60px;
+    padding: 0 25px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: $warm-grey;
+    box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    &::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 6px solid $aqua-marine;
+    }
+    &:hover {
+      background-color: $aqua-marine;
+      transition: .2s;
+      &::after {
+        border-top-color: $white-two;
+      }
+    }
+  }
+}
+
+
+
+/* DROPDOWN-MENU end */

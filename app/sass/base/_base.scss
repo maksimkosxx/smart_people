@@ -1,0 +1,17 @@
+body {
+  font-family: $font-base;
+  background-color: $greyish-brown;
+  color: $white-two;
+
+}
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  pointer-events: none;
+  user-select: none;
+}
+

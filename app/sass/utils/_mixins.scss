@@ -1,0 +1,73 @@
+
+
+// Placeholders mixins
+
+@mixin placeholder {
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &:-ms-input-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}
+@mixin placeholder-focus {
+  &:focus:-moz-placeholder { @content; }
+  &:focus::-moz-placeholder { @content; }
+  &:focus:-ms-input-placeholder { @content; }
+  &:focus::-webkit-input-placeholder { @content; }
+}
+
+// Flex mixins
+
+//@mixin flex() {
+//  display: flex;
+//  flex-direction: row;
+//  align-items: center;
+//  justify-content: space-between;
+//}
+
+
+// Media queries mixins
+
+@mixin respond-to($media) {
+  @if $media == sm {
+    @media only screen and (max-width: $sm) { @content; }
+  }
+  @else if $media == md {
+    @media only screen and (max-width: $md) { @content; }
+  }
+  @else if $media == lg {
+    @media (min-width: $md + 1) and (max-width: $lg) { @content; }
+  }
+}
+
+
+// Mixins for links
+//
+//@mixin links ($link, $active) {
+//  & {
+//    color: $link;
+//    transition: .2s;
+//    &:visited {
+//      color: $active;
+//    }
+//    &:hover {
+//      color: $active;
+//    }
+//    &:active, &:focus {
+//      color: $active;
+//    }
+//  }
+//}
+
+// Events background items mixin
+
+//@for $i from 1 through 6 {
+//  .events-item:nth-child(#{$i}) {
+//    background-image: url("/img/events/image#{$i}.png");
+//  }
+//}
+//
+//@for $i from 1 through 6 {
+//  .events--principles .events-item:nth-child(#{$i}) {
+//    background-image: url("/img/principles/image#{$i}.jpg");
+//  }
+//}

@@ -1,0 +1,25 @@
+{
+  "name": "laptev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mscheglov",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-cache": "^1.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-svgmin": "^1.2.4",
+    "gulp-uglifyjs": "^0.6.2"
+  }
+}
