@@ -9,6 +9,10 @@
 
 @import 'layout/news-line',
         'layout/header',
-        'layout/grid';
+        'layout/grid',
+        'layout/person';
 
-@import "components/dropdown-menu";
+@import "components/dropdown-menu",
+        "components/video-block",
+        "components/text-block",
+        "components/image-block";

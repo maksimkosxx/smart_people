@@ -993,6 +993,10 @@ img {
 /* NEWS-LINE */
 
 .news-line {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1005,6 +1009,7 @@ img {
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
+  width: 100%;
   padding: 5px 0 7px 16px;
   background-color: #323232;
   -webkit-box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.12);
@@ -1063,27 +1068,64 @@ img {
 }
 
 .grid--main {
-  margin-top: 32px;
-}
-
-.grid-content__row {
-  margin: 0 -15px;
+  margin: 32px 0 60px;
 }
 
 .grid-content__item {
+  margin: 15px 0 30px;
+}
+
+.grid-sidebar {
   margin: 15px 0;
 }
 
-.grid-content__item::after,
-.grid-content__item::before {
-  content: '';
-  display: table;
-  clear: both;
+.grid-sidebar__item {
+  min-height: 900px;
+  background-color: #dddddd;
 }
 
 /* GRID end */
 
+.person-photo {
+  height: 270px;
+}
+
+.person-photo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.person-info {
+  padding: 19px 10px 19px 27px;
+  background-color: #323232;
+  color: #ffffff;
+}
+
+.person-info__name {
+  margin-bottom: 6px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+.person-menu {
+  padding: 20px 10px 26px 26px;
+  background-color: #767676;
+  -webkit-box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.12);
+}
+
+.person-menu li span:last-child {
+  font-size: 16px;
+}
+
 /* DROPDOWN-MENU */
+
+.dropdown-menu {
+  margin: 15px 0;
+}
 
 .dropdown-menu__header {
   display: -webkit-box;
@@ -1130,6 +1172,143 @@ img {
 }
 
 /* DROPDOWN-MENU end */
+
+/* VIDEO-BLOCK */
+
+.video-block__content {
+  position: relative;
+  background: #dddddd;
+  -webkit-box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.12);
+}
+
+.video-block__btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 101px;
+  height: 102px;
+  margin: auto;
+  padding: 0;
+  border: none;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+}
+
+.video-block__btn svg {
+  width: 100%;
+  height: 100%;
+  fill: #ffffff;
+}
+
+.video-block__btn:hover svg {
+  fill: #50e3c2;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+}
+
+.video-block__btn:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+}
+
+.video-block--large .video-block__content {
+  min-height: 495px;
+}
+
+.video-block--small .video-block__content {
+  min-height: 247px;
+}
+
+/* VIDEO-BLOCK end */
+
+/* TEXT-BLOCK */
+
+.text-block {
+  padding: 70px 15px 15px 49px;
+  background-color: #dddddd;
+  -webkit-box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.12);
+}
+
+.text-block--large {
+  min-height: 694px;
+}
+
+.text-block--medium {
+  min-height: 618px;
+}
+
+.text-block__content {
+  max-width: 241px;
+}
+
+.text-block__field,
+.text-block p {
+  min-height: 19px;
+  margin-bottom: 38px;
+  padding: 0 5px;
+  font-size: 16px;
+  background: #ffffff;
+  color: #868686;
+}
+
+.text-block__field--category,
+.text-block p--category {
+  display: inline-block;
+  min-width: 60px;
+}
+
+.text-block__field--title,
+.text-block p--title {
+  display: inline-block;
+  min-width: 180px;
+  min-height: 31px;
+  line-height: 1.9;
+  background: #868686;
+  color: #ffffff;
+}
+
+.text-block__field--subtitle,
+.text-block p--subtitle {
+  display: inline-block;
+  min-width: 130px;
+}
+
+.text-block p {
+  margin-bottom: 19px;
+}
+
+/* TEXT-BLOCK end */
+
+/* IMAGE-BLOCK */
+
+.image-block__content {
+  position: relative;
+  min-height: 495px;
+  background-color: #dddddd;
+}
+
+.image-block__content svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 150px;
+  margin: auto;
+}
+
+/* IMAGE-BLOCK end */
 
 @media (min-width: 768px) {
   .container {
@@ -1583,7 +1762,7 @@ img {
 
 @media (min-width: 1200px) {
   .container {
-    width: 1170px;
+    width: 1200px;
   }
 
   .col-lg-1,

@@ -3,20 +3,18 @@
 .grid {
   overflow: hidden;
   &--main {
-    margin-top: 32px;
+    margin: 32px 0 60px;
   }
   &-content {
-    &__row {
-      margin: 0 -15px;
-    }
     &__item {
-      margin: 15px 0;
-      &::after,
-      &::before {
-        content: '';
-        display: table;
-        clear: both;
-      }
+      margin: 15px 0 30px;
+    }
+  }
+  &-sidebar {
+    margin: 15px 0;
+    &__item {
+      min-height: 900px;
+      background-color: $white-three;
     }
   }
 }
