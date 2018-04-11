@@ -1,0 +1,35 @@
+/* FOOTER */
+
+.footer {
+  padding: 22px 30px;
+  background-color: $white;
+  overflow: hidden;
+  &-column {
+    &--left {
+      float: left;
+    }
+    &--right {
+      float: right;
+    }
+  }
+  a,
+  span {
+    display: inline-block;
+    margin-right: 30px;
+    font-size: 16px;
+    &:last-child {
+      margin-right: 0;
+    }
+    color: $greyish-brown-two;
+    &:hover {
+      text-decoration: none;
+      opacity: 0.7;
+      transition: .2s;
+    }
+  }
+  span {
+    pointer-events: none;
+  }
+}
+
+/* FOOTER end */
