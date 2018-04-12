@@ -1,0 +1,50 @@
+/* GOODS */
+
+.goods {
+  &-item {
+    display: block;
+    margin: 45px 0 20px;
+    font-size: 16px;
+    color: $white-two;
+    text-decoration: none;
+    cursor: pointer;
+    span {
+      display: block;
+    }
+    &:hover,
+    &:active {
+      opacity: 0.7;
+      text-decoration: none;
+      transition: .2s;
+      color: $white-two;
+    }
+    &__header {
+      min-height: 25px;
+      padding: 4px 0 0 32px;
+      background: url("/img/person-icons/user.svg") 0 50% no-repeat;
+      background-size: 23px 25px;
+    }
+    .login,
+    .name {
+      float: left;
+    }
+    .date {
+      float: right;
+    }
+    .price {
+      float: right;
+      font-weight: bold;
+      color: $aqua-marine;
+    }
+    &__content {
+      min-height: 202px;
+      margin: 9px 0 11px;
+      border-radius: 2px;
+      background-color: $white;
+    }
+  }
+}
+
+
+
+/* GOODS end */

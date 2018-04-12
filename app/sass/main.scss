@@ -9,6 +9,7 @@
 
 @import 'layout/news-line',
         'layout/header',
+        'layout/breadcrumbs',
         'layout/grid',
         'layout/person',
         'layout/footer';
@@ -16,4 +17,6 @@
 @import "components/dropdown-menu",
         "components/video-block",
         "components/text-block",
-        "components/image-block";
+        "components/image-block",
+        "components/goods",
+        "components/pagination";
