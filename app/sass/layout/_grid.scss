@@ -1,16 +1,23 @@
 /* GRID */
 
 .grid {
+  min-height: 1374px;
   overflow: hidden;
   &--main {
     margin: 32px 0 60px;
   }
   &--inner {
-    padding-bottom: 150px;
+    margin-top: 10px;
   }
   &-content {
     &__filters {
       margin-top: 5px;
+      &::after,
+      &::before {
+        content: '';
+        display: table;
+        clear: both;
+      }
       .dropdown-menu {
         float: right;
       }

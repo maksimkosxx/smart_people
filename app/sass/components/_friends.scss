@@ -1,0 +1,50 @@
+/* FRIENDS */
+
+.friends {
+  margin-top: 15px;
+  overflow: hidden;
+  &-item {
+    min-height: 100px;
+    margin-bottom: 20px;
+    background-color: $black;
+    overflow: hidden;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &__photo {
+      float: left;
+      display: block;
+      width: 100px;
+      height: 100px;
+      cursor: pointer;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      &:hover {
+        text-decoration: none;
+        img {
+          opacity: 0.7;
+          transition: .2s;
+        }
+      }
+    }
+    &__info {
+      float: left;
+      margin-left: 30px;
+      padding-top: 16px;
+      line-height: 1.4;
+      .name {
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .online-status {
+        color: $light-sage;
+      }
+    }
+  }
+}
+
+
+/* FRIENDS end*/
