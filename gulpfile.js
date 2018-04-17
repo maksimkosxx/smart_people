@@ -5,7 +5,7 @@ var gulp       = require('gulp'), // Подключаем Gulp
     uglify       = require('gulp-uglifyjs'), // Подключаем gulp-uglifyjs (для сжатия JS)
     cssnano      = require('gulp-cssnano'), // Подключаем пакет для минификации CSS
     rename       = require('gulp-rename'), // Подключаем библиотеку для переименования файлов
-    svgmin       = require('gulp-svgmin'),  // Минификация svg изображений
+    // svgmin       = require('gulp-svgmin'),  // Минификация svg изображений
     gcmq         = require('gulp-group-css-media-queries'),
     del          = require('del'), // Подключаем библиотеку для удаления файлов и папок   
     cache        = require('gulp-cache'), // Подключаем библиотеку кеширования
@@ -34,8 +34,8 @@ gulp.task('browser-sync', function() { // Создаем таск browser-sync
 
 gulp.task('scripts', function() {
     return gulp.src([
-        'app/libs/js/*.js'
-
+        'app/libs/js/jquery-3.2.1.min.js',
+        'app/js/main.js'
     ])
         .pipe(concat('main.min.js')) // Собираем их в кучу в новом файле libs.min.js
         .pipe(uglify()) // Сжимаем JS файл
@@ -43,16 +43,16 @@ gulp.task('scripts', function() {
 });
 
 
-gulp.task('svgmin', function () {  // Минификация свг изображений
-    return gulp.src('app/img/**/*.svg')
-        .pipe(svgmin())
-        .pipe(gulp.dest('app/img'));
-});
+// gulp.task('svgmin', function () {  // Минификация свг изображений
+//     return gulp.src('app/img/**/*.svg')
+//         .pipe(svgmin())
+//         .pipe(gulp.dest('app/img'));
+// });
 
-gulp.task('watch', ['browser-sync', 'scripts', 'svgmin'], function() {
+gulp.task('watch', ['browser-sync', 'scripts'], function() {
     gulp.watch('app/sass/**/*.scss', ['sass']); // Наблюдение за sass файлами в папке sass
     gulp.watch('app/*.html', browserSync.reload); // Наблюдение за HTML файлами в корне проекта
-    gulp.watch('app/js/**/*.js', browserSync.reload);   // Наблюдение за JS файлами в папке js
+    gulp.watch('app/js/*.js', browserSync.reload);   // Наблюдение за JS файлами в папке js
 });
 
 gulp.task('clean', function() {

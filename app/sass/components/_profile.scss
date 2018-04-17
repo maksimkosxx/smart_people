@@ -1,0 +1,119 @@
+/* PROFILE */
+
+.profile {
+  margin-top: 15px;
+  &-tabs {
+    &__nav {
+      div {
+        display: inline-block;
+        vertical-align: top;
+        width: 170px;
+        height: 60px;
+        margin-right: 15px;
+        font-weight: bold;
+        line-height: 58px;
+        text-align: center;
+        background-color: $black;
+        cursor: pointer;
+        transition: .2s;
+        &:hover {
+          color: $aqua-marine;
+        }
+        &.current {
+          pointer-events: none;
+          background-color: $warm-grey;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  &-content {
+    &__header {
+      display: flex;
+      align-items: center;
+      min-height: 210px;
+      margin-bottom: 67px;
+      padding: 20px 20px 20px 47px;
+      background-color: $warm-grey;
+      box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.12);
+    }
+    &__info {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 54px;
+      &:last-child {
+        margin-right: 0;
+      }
+      span {
+        font-weight: bold;
+        &:last-child {
+          margin-left: 5px;
+          color: $aqua-marine;
+        }
+      }
+    }
+    &__row {
+      overflow: hidden;
+      .title {
+        float: left;
+        font-size: 24px;
+        font-weight: bold;
+      }
+      button {
+        float: right;
+        width: 170px;
+        height: 40px;
+        background-color: $aqua-marine;
+        font-weight: bold;
+        &:hover {
+          background-color: $white-two;
+          color: $aqua-marine;
+        }
+      }
+    }
+    &__text {
+      margin-bottom: 30px;
+      padding: 82px 37px 67px 33px;
+      background-color: $warm-grey;
+      box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.12);
+      &:last-child {
+        margin-bottom: 0;
+      }
+      .title {
+        display: inline-block;
+        min-width: 235px;
+        min-height: 26px;
+        margin-bottom: 33px;
+        padding: 5px 5px 0;
+        font-weight: bold;
+        background-color: $warm-grey-two;
+      }
+      .subtitle {
+        display: inline-block;
+        min-width: 176px;
+        min-height: 17px;
+        margin-bottom: 33px;
+        padding: 0 5px;
+        font-size: 14px;
+        line-height: 17px;
+        background-color: $white-two;
+        color: $warm-grey-two;
+      }
+      p {
+        width: 100%;
+        min-height: 17px;
+        margin-bottom: 17px;
+        padding: 0 5px;
+        font-size: 14px;
+        line-height: 17px;
+        background-color: $white-two;
+        color: $warm-grey-two;
+      }
+    }
+  }
+}
+
+
+/* PROFILE end */

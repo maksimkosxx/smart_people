@@ -38,9 +38,38 @@
       .name {
         font-size: 18px;
         font-weight: bold;
+        color:$white-two;
+        &:hover {
+          opacity: 0.7;
+          text-decoration: none;
+          transition: .2s;
+        }
       }
       .online-status {
         color: $light-sage;
+      }
+    }
+    &__btn {
+      float: right;
+      width: 119px;
+      height: 40px;
+      margin-top: 30px;
+      line-height: normal;
+      background-color: $aqua-marine;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+      &:hover {
+        background-color: $warm-grey;
+      }
+    }
+    &__settings {
+      float: right;
+      width: 21px;
+      height: 24px;
+      margin: 38px 30px 0;
+      background: url("/img/settings-white.svg") center no-repeat;
+      background-size: contain;
+      &:hover {
+        opacity: 0.7;
       }
     }
   }

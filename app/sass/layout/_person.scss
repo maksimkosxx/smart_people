@@ -1,6 +1,20 @@
 /* SIDEBAR PERSON */
 
 .person {
+  position: relative;
+  &.online {
+    &::after {
+      content: '';
+      position: absolute;
+      top: -15px;
+      right: -15px;
+      display: block;
+      width: 39px;
+      height: 39px;
+      border-radius: 50%;
+      background-color: $light-sage;
+    }
+  }
   &-photo {
     height: 270px;
     img {
@@ -25,7 +39,7 @@
     background-color: $warm-grey;
     box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.12);
     li {
-      margin-bottom: 26px;
+      margin-bottom: 24px;
       cursor: pointer;
       &:last-child {
         margin-bottom: 0;

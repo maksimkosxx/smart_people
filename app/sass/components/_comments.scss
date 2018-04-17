@@ -1,0 +1,52 @@
+/* COMMENTS FORM */
+
+.comments {
+  margin-top: 49px;
+  &-title {
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 1;
+  }
+  &-description {
+    margin: 55px 0 60px;
+  }
+  textarea {
+    width: 100%;
+    min-height: 168px;
+    margin-bottom: 20px;
+    padding: 30px 20px 0;
+    border: none;
+    resize: none;
+    outline: none;
+    background-color: $warm-grey;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    @include placeholder {
+      opacity: 0.58;
+      font-size: 16px;
+      color: $white-two;
+      transition: .2s;
+    }
+    @include placeholder-focus {
+      opacity: 0;
+    }
+  }
+  input[type="submit"] {
+    float: right;
+    width: 170px;
+    height: 60px;
+    border: none;
+    background-color: $aqua-marine;
+    outline: none;
+    transition: .2s;
+    &:hover {
+      background-color: $warm-grey;
+    }
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+}
+
+/* COMMENTS FORM end */
