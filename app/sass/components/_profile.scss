@@ -28,14 +28,18 @@
         }
       }
     }
+    .profile-content__item:not(:first-child) {
+      display: none;
+    }
   }
   &-content {
     &__header {
       display: flex;
+      flex-flow: row wrap;
       align-items: center;
       min-height: 210px;
       margin-bottom: 67px;
-      padding: 20px 20px 20px 47px;
+      padding: 20px 47px 20px;
       background-color: $warm-grey;
       box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.12);
     }
@@ -43,6 +47,11 @@
       display: inline-block;
       vertical-align: middle;
       margin-right: 54px;
+      &.billing {
+        display: block;
+        margin-bottom: 45px;
+        font-size: 24px;
+      }
       &:last-child {
         margin-right: 0;
       }
@@ -54,10 +63,30 @@
         }
       }
     }
+    &__links {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      justify-content: space-between;
+      align-self: flex-start;
+      width: 100%;
+      margin-top: -20px;
+       a {
+         padding-bottom: 3px;
+         border-bottom: 1px solid $white-two;
+         color: $white-two;
+         text-decoration: none;
+         transition: .2s;
+         &:hover {
+           border-bottom-color: transparent;
+         }
+       }
+    }
     &__row {
       overflow: hidden;
       .title {
         float: left;
+        margin-bottom: 16px;
         font-size: 24px;
         font-weight: bold;
       }

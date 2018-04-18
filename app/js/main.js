@@ -4,6 +4,20 @@ $(document).ready(function () {
         var thisSrc = $(this).children('img').attr('src');
 
         $('.goods-slider__for img').attr('src', thisSrc);
-    })
+    });
+
+    function tabs() {
+        $('.profile-tabs__nav div').on('click', function () {
+
+            var click_id = $(this).attr('id');
+            var item = '#item_' + click_id;
+
+            $('.profile-tabs__nav div').removeClass('current');
+            $('.profile-content__item').hide();
+            $(this).addClass('current');
+            $(item).show();
+        });
+    }
+    tabs();
 
 });

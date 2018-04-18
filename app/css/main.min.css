@@ -2148,18 +2148,27 @@ input:checked + .slider::before {
   margin-right: 0;
 }
 
+.profile-tabs .profile-content__item:not(:first-child) {
+  display: none;
+}
+
 .profile-content__header {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
   min-height: 210px;
   margin-bottom: 67px;
-  padding: 20px 20px 20px 47px;
+  padding: 20px 47px 20px;
   background-color: #767676;
   -webkit-box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.12);
   box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.12);
@@ -2169,6 +2178,12 @@ input:checked + .slider::before {
   display: inline-block;
   vertical-align: middle;
   margin-right: 54px;
+}
+
+.profile-content__info.billing {
+  display: block;
+  margin-bottom: 45px;
+  font-size: 24px;
 }
 
 .profile-content__info:last-child {
@@ -2184,12 +2199,52 @@ input:checked + .slider::before {
   color: #50e3c2;
 }
 
+.profile-content__links {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  width: 100%;
+  margin-top: -20px;
+}
+
+.profile-content__links a {
+  padding-bottom: 3px;
+  border-bottom: 1px solid #ffffff;
+  color: #ffffff;
+  text-decoration: none;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+}
+
+.profile-content__links a:hover {
+  border-bottom-color: transparent;
+}
+
 .profile-content__row {
   overflow: hidden;
 }
 
 .profile-content__row .title {
   float: left;
+  margin-bottom: 16px;
   font-size: 24px;
   font-weight: bold;
 }
