@@ -4,23 +4,34 @@
   padding: 70px 15px 15px 49px;
   background-color: $white-three;
   box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.12);
+  @include respond-to(sm) {
+    padding: 30px 15px 15px 23px;
+  }
   &--large {
     min-height: 694px;
+    @include respond-to(sm) {
+      min-height: 450px;
+    }
   }
   &--medium {
     min-height: 618px;
+    @include respond-to(sm) {
+      min-height: 450px;
+    }
   }
   &__content {
     max-width: 241px;
   }
-  &__field,
-  p {
+  &__field {
     min-height: 19px;
     margin-bottom: 38px;
     padding: 0 5px;
     font-size: 16px;
     background: $white-two;
     color: $warm-grey-two;
+    @include respond-to(sm) {
+      margin-bottom: 15px;
+    }
     &--category {
       display: inline-block;
       min-width: 60px;
@@ -36,6 +47,17 @@
     &--subtitle {
       display: inline-block;
       min-width: 130px;
+    }
+  }
+  p {
+    min-height: 19px;
+    margin-bottom: 38px;
+    padding: 0 5px;
+    font-size: 16px;
+    background: $white-two;
+    color: $warm-grey-two;
+    @include respond-to(sm) {
+      margin-bottom: 15px;
     }
   }
   p {

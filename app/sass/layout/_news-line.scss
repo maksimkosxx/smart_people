@@ -12,11 +12,23 @@
   padding: 5px 0 7px 16px;
   background-color: $black;
   box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.12);
+  @include respond-to(sm) {
+    display: none;
+    padding: 5px 0 7px;
+    flex-flow: row wrap;
+  }
   &__courses {
     display: flex;
     flex-flow: row;
     min-width: 215px;
     border-right: 1px solid $white-two;
+    @include respond-to(sm) {
+      width: 100%;
+      padding: 5px 15px;
+      justify-content: center;
+
+      border-right: none;
+    }
     span {
       white-space: nowrap;
       &:first-child {
@@ -27,6 +39,9 @@
   &__info {
     padding-left: 20px;
     line-height: 1.3;
+    @include respond-to(sm) {
+      width: 100%;
+    }
   }
 }
 

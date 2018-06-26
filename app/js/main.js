@@ -20,4 +20,10 @@ $(document).ready(function () {
     }
     tabs();
 
+    $('.grid-sidebar').on('click',function () {
+        $(this).css('width', '100%');
+        $('.person-photo').toggleClass('hidden');
+        $('.person').children().slideToggle();
+    });
+
 });

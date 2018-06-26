@@ -5,6 +5,9 @@
   overflow: hidden;
   &--main {
     margin: 32px 0 60px;
+    @include respond-to(sm) {
+      margin-top: 0;
+    }
   }
   &--inner {
     margin-top: 10px;
@@ -24,10 +27,22 @@
     }
     &__item {
       margin: 15px 0 30px;
+      @include respond-to(sm) {
+        margin: 15px 0;
+      }
     }
   }
   &-sidebar {
     margin: 15px 0;
+    @include respond-to(sm) {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 40px;
+      height: 40px;
+      margin: 0;
+      padding: 0;
+    }
     &__item {
       min-height: 900px;
       background-color: $white-three;

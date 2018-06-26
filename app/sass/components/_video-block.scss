@@ -40,6 +40,9 @@
   &--large {
     .video-block__content {
       min-height: 495px;
+      @include respond-to(sm) {
+        min-height: 200px;
+      }
     }
   }
   &--small {

@@ -3,12 +3,29 @@
 .header {
   margin-top: 32px;
   padding: 45px 0 32px;
+  overflow: hidden;
+  @include respond-to(sm) {
+    margin-top: 15px;
+    padding: 30px 0 15px;
+  }
+  &-logo {
+    @include respond-to(sm) {
+      img {
+        max-width: 100%;
+      }
+    }
+  }
   &-title {
     margin: 27px 0 0 0;
     font-size: 36px;
     font-weight: 300;
     line-height: 1.2;
     color: $white-two;
+    @include respond-to(sm) {
+      margin-top: 15px;
+      font-size: 20px;
+      text-align: center;
+    }
   }
 }
 

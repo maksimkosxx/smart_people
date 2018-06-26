@@ -5,6 +5,9 @@
     position: relative;
     min-height: 495px;
     background-color: $white-three;
+    @include respond-to(sm) {
+      min-height: 200px;
+    }
     svg {
       position: absolute;
       top: 0;
